@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="box" id="heading">
+      <h1><%= day %></h1>
+    </div>
+    <div class="box">
+        <% for(var i=0;i<newItems.length ;i++ ){ %>
+          <div class="item">
+            <input type="checkbox">
+            <p><%= newItems[i] %></p>
+          </div>
+        <% } %>
+      <form class="inputForm" action="/update" method="post">
+        <input type="text" name="newData" value="" placeholder="New item" autocomplete="off" autofocus>
+        <button class="addButton" type="submit">+</button>
+      </form>
+    </div>
+      <form action="/" method="post">
+        <button class="remake" type="submit">Remake</button>
+      </form>
+    <footer>Copyright Aman Garg 2020</footer>
+  </body>
+</html>
