@@ -63,11 +63,16 @@ form {
   width: 50px;
   border-radius: 50%;
   border-color: transparent;
-  background-color: #ee6f57;
-  color: #fff;
+  color: #ee6f57;
+  background-color: #fff;
   font-size: 30px;
   padding-bottom: 6px;
   border-width: 0;
+}
+
+.addButton:hover{
+  background-color: #ee6f57;
+  color: #fff;
 }
 
 input[type="text"] {
@@ -79,6 +84,8 @@ input[type="text"] {
   font-size: 20px;
   font-weight: 200;
   width: 313px;
+  color: #070d59;
+  font-family: 'helvetica neue';
 }
 
 input[type="text"]:focus {
@@ -90,7 +97,10 @@ input[type="text"]:focus {
   color: #070d59;
   opacity: .4;
 }
-
+.remake:hover{
+  color: #ee6f57;
+  background-color: #fff;
+}
 .remake{
   min-height: 50px;
   width: 200px;
@@ -99,6 +109,7 @@ input[type="text"]:focus {
   background-color: #ee6f57;
   color: #fff;
   font-size: 30px;
+  font-family: 'helvetica neue';
   padding-bottom: 6px;
   border-width: 0;
   margin-bottom: 120px;

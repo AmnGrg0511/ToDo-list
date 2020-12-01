@@ -10,18 +10,22 @@
       <h1><%= day %></h1>
     </div>
     <div class="box">
-        <% for(var i=0;i<newItems.length ;i++ ){ %>
-          <div class="item">
-            <input type="checkbox">
-            <p><%= newItems[i] %></p>
-          </div>
+        <% for(var i=0;i<newItems.length; i++){ %>
+          <form action="/delete" method="post">
+            <div class="item">
+              <input type="checkbox" onChange="this.form.submit()" name="Check" value="<%=newItems[i]._id%>">
+              <p><%= newItems[i].name %></p>
+            </div>
+            <input type="hidden" name="list" value="<%=day%>">
+          </form>
+
         <% } %>
-      <form class="inputForm" action="/update" method="post">
-        <input type="text" name="newData" value="" placeholder="New item" autocomplete="off" autofocus>
-        <button class="addButton" type="submit">+</button>
+      <form class="inputForm" action="/" method="post">
+        <input type="text" name="newData" value="" placeholder="New item" autocomplete="off" onfocus="this.placeholder = ''" onblur="this.placeholder = 'New item'">
+        <button class="addButton" type="submit" name="list" value="<%=day%>">+</button>
       </form>
     </div>
-      <form action="/" method="post">
+      <form action="/remake" method="post">
         <button class="remake" type="submit">Remake</button>
       </form>
     <footer>Copyright Aman Garg 2020</footer>
